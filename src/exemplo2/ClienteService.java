@@ -1,5 +1,6 @@
 package exemplo2;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,7 +10,11 @@ public class ClienteService {
 
     public void salvar(Cliente cliente) {
         ValidatorUtil.validarCPF(cliente.getCpf());
+        ValidatorUtil.validarNascimento(cliente.getNascimento());
         database.add(cliente);
     }
+
+    
+	
 
 }
